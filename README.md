@@ -55,6 +55,6 @@ This project aims to leverage Graph Neural Networks (GNNs), to analyze smartwatc
    ```bash
    git clone https://github.com/username/project-repo.git](https://github.com/roeiAv/Applying-Graph-Neural-Networks-on-Smart-watch-based-data-of-physiological-parameters.git
    ```
-2. Navigate to project directory and run LabProject.ipynb via Jupyter notebook:
+2. Navigate to project directory and run the desiered file via Jupyter notebook. run LabProject.ipynb for trial and observational data experiments and LabProject_Empatica.ipynb for Empatica experiment.
    
 
