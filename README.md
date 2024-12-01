@@ -1,17 +1,15 @@
 # Project Overview
 
-## Project Title
+## Project Goal
 Enhancing ADHD Treatment Insights Through Machine Learning and Smartwatch Data
 
 ## Project Description
-This project aims to leverage advanced machine learning techniques, specifically Graph Neural Networks (GNNs), to analyze smartwatch-based physiological and activity data collected from children diagnosed with ADHD. By integrating trial and observational data, the project seeks to better understand the impact of ADHD medication (e.g., methylphenidate) on behavior and activity patterns. The ultimate goal is to create predictive models that can interpret and predict medication effects, improving the understanding of ADHD treatment dynamics.
+This project aims to leverage Graph Neural Networks (GNNs), to analyze smartwatch-based physiological and activity data collected from children diagnosed with ADHD. By integrating trial and observational data, the project seeks to better understand the impact of ADHD medication (e.g., methylphenidate) on behavior and activity patterns.
 
 ## Objectives
 - Train GNN models on labeled trial data to develop robust prediction capabilities.
 - Apply trained GNNs to observational data to gain deeper insights into real-world ADHD treatment responses.
-- Explore the integration of different data sources, such as sensor measurements and behavioral data.
-- Address challenges related to noise in data, electronic device biases, and data missingness.
-- Investigate potential gender differences in ADHD presentation and treatment response.
+- Investigate potential gender differences in ADHD presentation and treatment response.(Empatica data Experiment)
 
 ## Methodology
 1. **Data Collection**:
@@ -20,15 +18,17 @@ This project aims to leverage advanced machine learning techniques, specifically
 
 2. **Data Preprocessing**:
    - Cleaning and transformation of raw sensor data into feature sets that include heart rate variability and movement patterns.
-   - Addressing missing data and biases from electronic devices.
+   - Addressing missing data and biases from electronic devices.(missingness was added as a feature)
 
 3. **Model Development**:
-   - Training GNNs on the trial data to recognize patterns and predict medication intake effects.
-   - Implementing Random Forest classifiers as additional models for comparative analysis.
+   - Training GNNs on the trial data to enrich data vectors and add contextual value to datapoints.
 
 4. **Evaluation Metrics**:
-   - Performance evaluation using standard metrics such as accuracy, precision, recall, and F1-score.
-   - Assessing model interpretability and robustness across different settings.
+   The evaluation of the models focused on a robust set of performance metrics to ensure comprehensive assessment:
+   - LDA (Linear Discriminant Analysis): Used for dimensionality reduction and to evaluate and understand the variance the across different medication conditions
+   - ROC Curves: Employed to assess the trade-off between true positive rate (sensitivity) and false positive rate (1-specificity).
+   - Confusion Matrix: Provided a detailed breakdown of model predictions, including true positives, true negatives, false positives, and false negatives. were more informative from ROC at Empatica experiment because of larger data amount.  
+   - Weekly Consolidated Graphs: used evaluate the observational by comparing them with established medication concentration profiles from the literature to identify potential correlations or patterns.
 
 ## Challenges
 - Handling noise and variability in observational data.
@@ -43,35 +43,18 @@ This project aims to leverage advanced machine learning techniques, specifically
 - **Roei Avraham**
 
 ## Key Results
-- The trained GNN models demonstrate potential in predicting medication status and assessing physiological changes.
-- Comparative analysis with Random Forest classifiers shows the strengths and limitations of each approach.
-- Insights from the project contribute to a deeper understanding of medication effects, offering potential clinical applications to support ADHD treatment strategies.
+- the trained GNN models demonstrated strong predictive capabilities for medication status within trial data, showing improved accuracy and interpretability compared to baseline models.
+- Observations indicated potential gender differences in treatment responses, suggesting areas for further research.
 
 ## Future Work
-- Enhancing model training with more comprehensive data sets.
+- Enhancing model architecture, both GNN layers and graph representation of the data.
 - Addressing model performance across diverse demographic groups.
-- Exploring additional data features that could improve prediction accuracy.
-- Incorporating feedback mechanisms for continuous learning and model updates.
 
 ## How to Use This Repository
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/project-repo.git
+   git clone https://github.com/username/project-repo.git](https://github.com/roeiAv/Applying-Graph-Neural-Networks-on-Smart-watch-based-data-of-physiological-parameters.git
    ```
-2. Navigate to the project directory:
-   ```bash
-   cd project-repo
-   ```
-3. Install the necessary dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the data preprocessing script:
-   ```bash
-   python preprocess_data.py
-   ```
-5. Train and evaluate the models:
-   ```bash
-   python train_model.py
-   ```
+2. Navigate to project directory and run LabProject.ipynb via Jupyter notebook:
+   
 
