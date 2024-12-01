@@ -9,8 +9,6 @@ This project aims to leverage Graph Neural Networks (GNNs), to analyze smartwatc
 ## Objectives
 - Train GNN models on labeled trial data to develop robust prediction capabilities.
 - Apply trained GNNs to observational data to gain deeper insights into real-world ADHD treatment responses.
-- Investigate potential gender differences in ADHD presentation and treatment response.(Empatica data Experiment)
-
 ## Methodology
 1. **Data Collection**:
    - **Trial Data**: Collected during controlled settings where children wear smartwatches that monitor heart rate, accelerometer, and gyroscope data.
@@ -47,6 +45,7 @@ This project aims to leverage Graph Neural Networks (GNNs), to analyze smartwatc
 - Observations indicated potential gender differences in treatment responses, suggesting areas for further research.
 
 ## Future Work
+-Investigate potential gender differences in ADHD presentation and treatment response.(Ongoing research with Samsung watch!)
 - Enhancing model architecture, both GNN layers and graph representation of the data.
 - Addressing model performance across diverse demographic groups.
 
